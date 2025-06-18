@@ -1,0 +1,7 @@
+.my-details{
+    display: flex;
+}
+.div1{
+    flex: 1;
+    padding: 20px;
+}
