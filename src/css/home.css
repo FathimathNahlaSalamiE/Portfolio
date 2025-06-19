@@ -4,4 +4,25 @@
 .div1{
     flex: 1;
     padding: 20px;
+    margin-left: 8%;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+.sentence{
+    margin-top: 20px;
+    width: 80%;
+}
+p{
+    text-align: justify;
+}
+.edit-image{
+    padding: 0;
+    margin: 0;
+    box-shadow: 3px 5px 20px 1px rgb(29, 28, 28);
+}
+.a-button{
+    text-decoration: none;
+    color: white;
 }
