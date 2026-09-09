@@ -3,6 +3,11 @@ import Naav from './Components/Naav.jsx'
 import Home from './Components/Home.jsx'
 import Front from './Components/Front.jsx'
 import Social from './Components/Social.jsx'
+import About from './Components/About.jsx'
+import Base from './Components/Base.jsx'
+import Creations from './Components/Creations.jsx'
+import Degree from './Components/Degree.jsx'
+import Experience from './Components/Experience.jsx'
 
 function App() {
 
@@ -10,9 +15,13 @@ function App() {
     <>
       <Naav />
       <Social />
-      {/* <Home /> */}
       <Front />
-  
+      {/* <Home /> */}
+      <About />
+      <Base />
+      <Creations />
+      <Experience />
+      <Degree />
     </>
   )
 }

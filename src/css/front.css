@@ -76,23 +76,35 @@
     margin-top: 25px;
 }
 
-.front-div .resume-button {
-    padding: 14px 22px;
+.front-div .front-resume a{
+    display: flex;
 
-    font-family: monospace;
-    font-size: clamp(14px, 1.5vw, 18px);
+    align-items: center;
 
-    border-radius: 100px;
-    background: maroon;
-    border: none;
+    padding: 9px 18px;
+
+    border: 1px solid maroon;
+
+    border-radius: 20px;
+
     color: wheat;
 
-    cursor: pointer;
+    text-decoration: none;
+
+    font-size: 16px;
+
     transition: 0.3s ease;
 }
 
-.front-div .resume-button:hover {
-    transform: translateY(-3px);
+.front-div .front-resume a:hover {
+    background: maroon;
+
+    color: wheat;
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 35px
+        rgba(128, 0, 0, 0.25);
 }
 
 

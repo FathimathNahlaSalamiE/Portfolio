@@ -65,7 +65,7 @@ function Front() {
              Currently based in the UAE and open to full-stack & 
              AI engineering roles.</p>
           <div className='front-resume'>
-            <a href="https://drive.google.com/file/d/11ssklle7JfMeHBIvjxbkYmDg7QLBWEJT/view?usp=drive_link" target='_blank'><button className='resume-button'>View Resume</button></a>
+            <a href="https://drive.google.com/file/d/11ssklle7JfMeHBIvjxbkYmDg7QLBWEJT/view?usp=drive_link" target='_blank'>View Resume</a>
           </div>
         </div>
       </div>

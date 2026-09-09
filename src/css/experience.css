@@ -1,0 +1,326 @@
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-container {
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    background: #000;
+
+    color: maroon;
+
+    padding: 60px 8% 100px;
+
+    font-family: monospace;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.experience-heading {
+
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   EXPERIENCE GRID
+========================= */
+
+.experience-grid {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+
+/* =========================
+   EXPERIENCE CARD
+========================= */
+
+.experience-card {
+
+    position: relative;
+
+    padding: 45px 35px 35px;
+
+    border: 1px solid maroon;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.experience-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 35px
+        rgba(128, 0, 0, 0.25);
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.experience-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 20px;
+
+    font-size: 12px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   ROLE
+========================= */
+
+.experience-card h2 {
+
+    margin: 0 0 10px;
+
+    font-size: 25px;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   COMPANY
+========================= */
+
+.experience-card h3 {
+
+    margin: 0;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    color: wheat;
+}
+
+
+/* =========================
+   DURATION
+========================= */
+
+.experience-duration {
+
+    margin: 10px 0 30px;
+
+    color: maroon;
+
+    font-size: 14px;
+
+    text-align: left;
+}
+
+
+/* =========================
+   RESPONSIBILITIES
+========================= */
+
+.responsibilities h4,
+.experience-skills h4 {
+
+    margin: 0 0 15px;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+
+
+.responsibilities ul {
+
+    margin: 0;
+
+    padding-left: 20px;
+}
+
+
+.responsibilities li {
+
+    margin-bottom: 9px;
+
+    color: wheat;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.experience-skills {
+
+    margin-top: 30px;
+}
+
+
+.experience-skill-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.experience-skill {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border: 1px solid maroon;
+
+    border-radius: 20px;
+
+    color: wheat;
+
+    font-size: 11px;
+
+    transition: 0.3s ease;
+}
+
+
+.experience-skill svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+
+.experience-skill:hover {
+
+    background: maroon;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .experience-container {
+
+        padding-left: 6%;
+
+        padding-right: 6%;
+    }
+
+
+    .experience-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .experience-container {
+
+        padding: 45px 20px 100px;
+    }
+
+
+    .experience-heading {
+
+        font-size: 32px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .experience-card {
+
+        padding: 40px 22px 25px;
+    }
+
+
+    .experience-card h2 {
+
+        font-size: 21px;
+
+        line-height: 1.4;
+    }
+
+
+    .experience-card h3 {
+
+        font-size: 16px;
+    }
+
+
+    .responsibilities li {
+
+        font-size: 12px;
+    }
+
+
+    .experience-skill {
+
+        font-size: 10px;
+
+        padding: 6px 8px;
+    }
+
+}

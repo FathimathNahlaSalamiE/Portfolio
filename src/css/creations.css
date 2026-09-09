@@ -1,0 +1,383 @@
+/* =========================
+   CREATIONS
+========================= */
+
+.creations-container {
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    background: #000;
+
+    color: maroon;
+
+    padding: 50px 7%;
+
+    font-family: monospace;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.creations-heading {
+
+    margin: 0 0 50px;
+
+    text-align: center;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   PROJECT CONTAINER
+========================= */
+
+.projects-container {
+
+    width: 100%;
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 35px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+
+    width: 100%;
+
+    border: 1px solid maroon;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background: #000;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.project-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 35px
+        rgba(128, 0, 0, 0.25);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.project-image {
+
+    width: 100%;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+.project-card:hover
+.project-image img {
+
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.project-content {
+
+    padding: 25px;
+}
+
+
+.project-content h2 {
+
+    margin: 0 0 15px;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    color: maroon;
+}
+
+
+.project-content p {
+
+    margin: 0 0 20px;
+
+    color: wheat;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    text-align: left;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.project-links {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.project-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 8px 13px;
+
+    border: 1px solid maroon;
+
+    border-radius: 20px;
+
+    color: wheat;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+
+.project-links a:hover {
+
+    background: maroon;
+
+    color: wheat;
+}
+
+
+.project-links svg {
+
+    width: 16px;
+
+    height: 16px;
+}
+
+
+/* =========================
+   PROJECT SKILLS
+========================= */
+
+.project-skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.project-skill {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: wheat;
+
+    font-size: 11px;
+}
+
+
+.project-skill svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.project-pagination {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 45px;
+}
+
+
+.page-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    padding: 0;
+
+    border: 1px solid maroon;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.page-dot.active {
+
+    background: maroon;
+
+    transform: scale(1.2);
+}
+
+
+.page-dot:hover {
+
+    background: maroon;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .creations-container {
+
+        padding: 40px 6%;
+    }
+
+
+    .projects-container {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .creations-container {
+
+        padding: 35px 20px 100px;
+    }
+
+
+    .creations-heading {
+
+        font-size: 32px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .projects-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .project-image {
+
+        height: 200px;
+    }
+
+
+    .project-content {
+
+        padding: 20px;
+    }
+
+
+    .project-content h2 {
+
+        font-size: 22px;
+    }
+
+
+    .project-content p {
+
+        font-size: 13px;
+    }
+
+}

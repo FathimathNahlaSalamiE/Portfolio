@@ -1,0 +1,232 @@
+/* =========================
+   ABOUT
+========================= */
+
+.about-container {
+    width: 100%;
+    min-height: 100svh;
+
+    background: #000;
+    color: maroon;
+
+    padding: 50px 10%;
+
+    position: relative;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.about-heading {
+    margin: 0;
+
+    font-family: monospace;
+    font-size: clamp(32px, 4vw, 50px);
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.about-content {
+    width: 100%;
+
+    min-height: calc(100svh - 150px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding: 40px 5%;
+}
+
+
+/* =========================
+   LEFT TEXT
+========================= */
+
+.about-text {
+    width: 50%;
+
+    font-family: monospace;
+}
+
+
+.about-text h2 {
+    margin-bottom: 25px;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    color: maroon;
+}
+
+
+.about-text p {
+    max-width: 550px;
+
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: maroon;
+
+    text-align: justify;
+}
+
+
+/* =========================
+   RIGHT PHOTO
+========================= */
+
+.about-photo {
+    width: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+
+.about-photo img {
+    width: 100%;
+
+    max-width: 350px;
+
+    height: 400px;
+
+    display: block;
+
+    object-fit:cover;
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .about-container {
+        padding: 40px 7%;
+    }
+
+    .about-content {
+        gap: 40px;
+        padding: 30px 2%;
+    }
+
+    .about-text {
+        width: 50%;
+    }
+
+    .about-photo {
+        width: 50%;
+    }
+
+    .about-photo img {
+        max-width: 300px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .about-container {
+        min-height: 100svh;
+
+        padding: 35px 25px;
+
+        padding-bottom: 100px;
+    }
+
+
+    .about-heading {
+        font-size: 32px;
+    }
+
+
+    .about-content {
+        min-height: auto;
+
+        flex-direction: column;
+
+        gap: 45px;
+
+        padding: 40px 0 20px;
+
+        align-items: center;
+    }
+
+
+    /* Text */
+
+    .about-text {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .about-text h2 {
+        font-size: 25px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .about-text p {
+        width: 100%;
+
+        max-width: 500px;
+
+        margin: 0 auto;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+
+    /* Photo */
+
+    .about-photo {
+        width: 100%;
+    }
+
+
+    .about-photo img {
+        width: 70%;
+
+        max-width: 240px;
+    }
+}

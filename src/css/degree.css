@@ -1,0 +1,205 @@
+/* =========================
+   DEGREE
+========================= */
+
+.degree-container {
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    background: #000;
+
+    color: maroon;
+
+    padding: 60px 8%;
+
+    font-family: monospace;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.degree-heading {
+
+    margin: 0 0 60px;
+
+    text-align: center;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-list {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.education-card {
+
+    position: relative;
+
+    border: 1px solid maroon;
+
+    border-radius: 10px;
+
+    padding: 45px;
+
+    transition: 0.3s ease;
+}
+
+
+.education-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(128, 0, 0, 0.25);
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.education-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 22px;
+
+    font-size: 12px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.education-main h2 {
+
+    margin: 0 0 10px;
+
+    font-size: 30px;
+
+    font-weight: 400;
+}
+
+
+.education-main h3 {
+
+    margin: 0 0 20px;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    color: wheat;
+}
+
+
+.college {
+
+    margin: 0;
+
+    font-size: 16px;
+
+    color: wheat;
+
+    text-align: left;
+}
+
+
+/* =========================
+   YEAR / GRADE
+========================= */
+
+.education-meta {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 25px;
+
+    color: maroon;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .degree-container {
+
+        padding: 45px 20px 80px;
+    }
+
+
+    .degree-heading {
+
+        font-size: 32px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .education-card {
+
+        padding: 40px 25px 30px;
+    }
+
+
+    .education-main h2 {
+
+        font-size: 24px;
+    }
+
+
+    .education-main h3 {
+
+        font-size: 17px;
+    }
+
+
+    .college {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .education-meta {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
