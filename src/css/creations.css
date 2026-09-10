@@ -1,30 +1,32 @@
-/* =========================
-   CREATIONS
-========================= */
+/* =========================================================
+   CREATIONS SECTION
+========================================================= */
 
 .creations-container {
-
     width: 100%;
-
     min-height: 100svh;
 
     background: #000;
-
     color: maroon;
 
-    padding: 50px 7%;
+    /* Space for fixed Naav + Social */
+    padding: 60px 130px 110px;
 
     font-family: monospace;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
 }
 
 
-/* =========================
+/* =========================================================
    HEADING
-========================= */
+========================================================= */
 
 .creations-heading {
-
-    margin: 0 0 50px;
+    margin: 0 0 45px;
 
     text-align: center;
 
@@ -36,125 +38,254 @@
 }
 
 
-/* =========================
-   PROJECT CONTAINER
-========================= */
+/* =========================================================
+   CAROUSEL
+========================================================= */
 
-.projects-container {
-
+.projects-carousel {
     width: 100%;
-
-    max-width: 1300px;
+    max-width: 1250px;
 
     margin: auto;
 
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =========================================================
+   PROJECT WINDOW
+========================================================= */
+
+.projects-window {
+    flex: 1;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    /*
+       Important:
+       Gives the card enough space when
+       it moves upward on hover.
+    */
+    padding: 15px 0;
+}
+
+
+/* =========================================================
+   PROJECT TRACK
+========================================================= */
+
+.projects-track {
     display: grid;
 
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 35px;
+    gap: 25px;
 }
 
 
-/* =========================
-   PROJECT CARD
-========================= */
+/* =========================================================
+   SLIDE LEFT
+========================================================= */
 
-.project-card {
+.projects-track.next {
+    animation: slideLeft 0.55s ease;
+}
 
-    width: 100%;
+@keyframes slideLeft {
+
+    from {
+        opacity: 0.5;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================================
+   SLIDE RIGHT
+========================================================= */
+
+.projects-track.previous {
+    animation: slideRight 0.55s ease;
+}
+
+@keyframes slideRight {
+
+    from {
+        opacity: 0.5;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.project-arrow {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
 
     border: 1px solid maroon;
-
-    border-radius: 8px;
-
-    overflow: hidden;
+    border-radius: 50%;
 
     background: #000;
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    color: maroon;
+
+    font-family: monospace;
+    font-size: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    position: relative;
+
+    z-index: 20;
 }
 
 
+.project-arrow:hover {
+    background: maroon;
+    color: wheat;
+
+    transform: scale(1.08);
+}
+
+
+.project-arrow:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.project-card {
+
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 50px 25px 25px;
+
+    border: 1px solid maroon;
+
+    /* Explicitly keep top border */
+    border-top: 1px solid maroon;
+
+    border-radius: 10px;
+
+    background: #000;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
 .project-card:hover {
 
-    transform: translateY(-8px);
+    /*
+       Do NOT use overflow:hidden here.
+       It can clip the border/shadow.
+    */
+    overflow: visible;
+
+    /*
+       Top border stays visible.
+    */
+    border: 1px solid maroon;
+    border-top: 1px solid maroon;
+
+    transform: translateY(-5px);
 
     box-shadow:
-        0 10px 35px
+        0 10px 30px
         rgba(128, 0, 0, 0.25);
 }
 
 
-/* =========================
-   IMAGE
-========================= */
+/* =========================================================
+   NUMBER
+========================================================= */
 
-.project-image {
+.project-number {
 
-    width: 100%;
+    position: absolute;
 
-    height: 220px;
+    top: 18px;
+    left: 20px;
 
-    overflow: hidden;
+    font-size: 12px;
 
-    background: #111;
+    opacity: 0.7;
 }
 
 
-.project-image img {
+/* =========================================================
+   PROJECT NAME
+========================================================= */
 
-    width: 100%;
+.project-card h2 {
 
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.4s ease;
-}
-
-
-.project-card:hover
-.project-image img {
-
-    transform: scale(1.04);
-}
-
-
-/* =========================
-   CONTENT
-========================= */
-
-.project-content {
-
-    padding: 25px;
-}
-
-
-.project-content h2 {
-
-    margin: 0 0 15px;
+    margin: 0 0 20px;
 
     font-size: 25px;
 
     font-weight: 400;
-
-    color: maroon;
 }
 
 
-.project-content p {
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
-    margin: 0 0 20px;
+.project-description {
+
+    margin: 0;
 
     color: wheat;
 
-    font-size: 14px;
+    font-size: 12px;
 
     line-height: 1.7;
 
@@ -162,63 +293,9 @@
 }
 
 
-/* =========================
-   LINKS
-========================= */
-
-.project-links {
-
-    display: flex;
-
-    gap: 12px;
-
-    margin-bottom: 20px;
-}
-
-
-.project-links a {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    padding: 8px 13px;
-
-    border: 1px solid maroon;
-
-    border-radius: 20px;
-
-    color: wheat;
-
-    text-decoration: none;
-
-    font-size: 13px;
-
-    transition: 0.3s ease;
-}
-
-
-.project-links a:hover {
-
-    background: maroon;
-
-    color: wheat;
-}
-
-
-.project-links svg {
-
-    width: 16px;
-
-    height: 16px;
-}
-
-
-/* =========================
-   PROJECT SKILLS
-========================= */
+/* =========================================================
+   SKILLS
+========================================================= */
 
 .project-skills {
 
@@ -226,7 +303,9 @@
 
     flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 7px;
+
+    margin-top: 25px;
 }
 
 
@@ -238,45 +317,104 @@
 
     gap: 5px;
 
+    padding: 5px 8px;
+
+    border: 1px solid maroon;
+
+    border-radius: 20px;
+
     color: wheat;
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 
 .project-skill svg {
 
-    width: 18px;
-
-    height: 18px;
-
-    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
 }
 
 
-/* =========================
+/* =========================================================
+   LINKS
+========================================================= */
+
+.project-links {
+
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    border-top:
+        1px solid rgba(128, 0, 0, 0.35);
+}
+
+
+.project-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 12px;
+
+    border-radius: 5px;
+
+    background: maroon;
+
+    color: wheat;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: 0.3s ease;
+}
+
+
+.project-links a:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.85;
+}
+
+
+/* =========================================================
    PAGINATION
-========================= */
+========================================================= */
 
 .project-pagination {
 
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     gap: 10px;
 
-    margin-top: 45px;
+    margin-top: 25px;
+
+    padding-bottom: 10px;
+
+    position: relative;
+    z-index: 10;
 }
 
 
-.page-dot {
+.pagination-dot {
 
-    width: 10px;
-
-    height: 10px;
+    width: 9px;
+    height: 9px;
 
     padding: 0;
 
@@ -292,92 +430,466 @@
 }
 
 
-.page-dot.active {
+.pagination-dot.active {
 
     background: maroon;
 
-    transform: scale(1.2);
+    transform: scale(1.25);
+}
+
+.desktop-projects {
+    display: block;
+}
+
+.mobile-projects {
+    display: none;
 }
 
 
-.page-dot:hover {
+/* =========================================================
+   LARGE TABLET / SMALL LAPTOP
+========================================================= */
 
-    background: maroon;
+@media (max-width: 1100px) {
+
+    .creations-container {
+
+        /*
+           Slightly smaller space for
+           fixed side navigation.
+        */
+        padding-left: 110px;
+        padding-right: 110px;
+    }
+
+
+    .projects-carousel {
+
+        gap: 15px;
+    }
+
+
+    .projects-track {
+
+        gap: 18px;
+    }
+
+
+    .project-card {
+
+        min-height: 420px;
+
+        padding:
+            48px 20px 22px;
+    }
+
+
+    .project-card h2 {
+
+        font-size: 22px;
+    }
 }
 
 
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
-@media (max-width: 992px) {
-
-    .creations-container {
-
-        padding: 40px 6%;
-    }
-
-
-    .projects-container {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 25px;
-    }
-
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 650px) {
+@media (max-width: 850px) {
 
     .creations-container {
 
-        padding: 35px 20px 100px;
+        padding:
+            50px 80px 110px;
     }
 
 
     .creations-heading {
 
-        font-size: 32px;
+        margin-bottom: 30px;
 
-        margin-bottom: 35px;
+        font-size: 42px;
     }
 
 
-    .projects-container {
+    .projects-carousel {
 
-        grid-template-columns: 1fr;
+        gap: 12px;
+    }
 
+
+    .projects-track {
+
+        gap: 15px;
+    }
+
+
+    .project-arrow {
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 20px;
+    }
+
+
+    .project-card {
+
+        min-height: 400px;
+
+        padding:
+            45px 18px 20px;
+    }
+
+
+    .project-card h2 {
+
+        font-size: 20px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .project-description {
+
+        font-size: 11px;
+    }
+
+
+    .project-skill {
+
+        font-size: 9px;
+
+        padding:
+            4px 6px;
+    }
+
+
+    .project-skill svg {
+
+        width: 14px;
+        height: 14px;
+    }
+
+
+    .project-links a {
+
+        font-size: 9px;
+
+        padding:
+            8px 9px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .creations-container {
+
+        /*
+           Naav is on the left
+           Social is on the right
+
+           Keep enough horizontal room
+           so neither overlaps the cards.
+        */
+        padding:
+            45px 55px 100px;
+    }
+
+
+    .creations-heading {
+
+        margin-bottom: 25px;
+
+        font-size: 32px;
+    }
+
+
+    .projects-carousel {
+
+        gap: 8px;
+    }
+
+
+    .projects-window {
+
+        padding:
+            12px 0;
+    }
+
+
+    /*
+       Still show 3 projects,
+       but allow cards to become smaller.
+    */
+    .projects-track {
+
+        gap: 10px;
+    }
+
+
+    .project-card {
+
+        min-height: 390px;
+
+        padding:
+            42px 12px 15px;
+
+        border-radius: 8px;
+    }
+
+
+    .project-card h2 {
+
+        font-size: 16px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .project-number {
+
+        top: 13px;
+        left: 12px;
+
+        font-size: 9px;
+    }
+
+
+    .project-description {
+
+        font-size: 9px;
+
+        line-height: 1.55;
+    }
+
+
+    .project-skills {
+
+        gap: 4px;
+
+        margin-top: 15px;
+    }
+
+
+    .project-skill {
+
+        gap: 3px;
+
+        padding:
+            3px 5px;
+
+        font-size: 7px;
+    }
+
+
+    .project-skill svg {
+
+        width: 11px;
+        height: 11px;
+    }
+
+
+    .project-links {
+
+        padding-top: 15px;
+
+        gap: 5px;
+    }
+
+
+    .project-links a {
+
+        gap: 3px;
+
+        padding:
+            6px 6px;
+
+        font-size: 7px;
+    }
+
+
+    /* .project-arrow {
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 16px;
+    } */
+
+
+    .project-pagination {
+
+        margin-top: 18px;
+    }
+
+
+    .pagination-dot {
+
+        width: 7px;
+        height: 7px;
+    }
+
+    .desktop-projects {
+        display: none;
+    }
+
+    .mobile-projects {
+        display: flex;
+        flex-direction: column;
         gap: 25px;
     }
 
+}
 
-    .project-image {
 
-        height: 200px;
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .creations-container {
+
+         min-height: 100svh;
+
+        /*
+           Leave space for fixed Naav and Social.
+        */
+        padding:
+            50px 55px 110px;
     }
 
 
-    .project-content {
+    .creations-heading {
 
-        padding: 20px;
+        margin-bottom: 35px;
+        font-size: 32px;
+    }
+
+ .projects-window {
+        width: 100%;
+        max-width: none;
+
+        overflow: visible;
+
+        padding: 0;
     }
 
 
-    .project-content h2 {
+    .projects-track {
+        display: flex;
+        flex-direction: column;
 
-        font-size: 22px;
+        gap: 25px;
+
+        /*
+           Show everything.
+        */
+        transform: none !important;
+        animation: none !important;
+        opacity: 1 !important;
     }
 
 
-    .project-content p {
+    /* -----------------------------------------
+       Cards
+    ----------------------------------------- */
 
-        font-size: 13px;
+    .project-card {
+
+        width: 100%;
+
+        min-height: 0;
+
+        padding:
+            45px 18px 20px;
+
+        border: 1px solid maroon;
+        border-top: 1px solid maroon;
+
+        border-radius: 8px;
+
+        transform: none;
     }
 
+
+    .project-card:hover {
+
+        transform: translateY(-4px);
+
+        border: 1px solid maroon;
+        border-top: 1px solid maroon;
+    }
+
+
+    .project-card h2 {
+        font-size: 20px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .project-description {
+        font-size: 11px;
+
+        line-height: 1.6;
+    }
+
+
+    .project-skills {
+
+        gap: 5px;
+
+        margin-top: 18px;
+    }
+
+
+    .project-skill {
+
+        padding: 4px 7px;
+
+        font-size: 9px;
+    }
+
+
+    .project-skill svg {
+
+        width: 14px;
+        height: 14px;
+    }
+
+
+    .project-links {
+
+        margin-top: 25px;
+
+        padding-top: 18px;
+
+        justify-content: flex-end;
+
+        gap: 7px;
+    }
+
+
+    .project-links a {
+
+        padding: 7px 9px;
+
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------------------
+       Hide pagination on mobile
+    ----------------------------------------- */
+
+    .project-pagination {
+        display: none;
+    }
 }

@@ -1,0 +1,352 @@
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    background: #000;
+
+    color: maroon;
+
+    padding: 60px 8% 40px;
+
+    font-family: monospace;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.contact-heading {
+
+    margin: 0 0 70px;
+
+    text-align: center;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.contact-content {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.contact-intro {
+
+    position: relative;
+
+    padding: 40px;
+
+    border-left: 1px solid maroon;
+}
+
+
+.contact-number {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 0;
+
+    font-size: 12px;
+
+    opacity: 0.7;
+}
+
+
+.contact-intro h2 {
+
+    margin: 0;
+
+    font-size: clamp(30px, 4vw, 50px);
+
+    line-height: 1.2;
+
+    font-weight: 400;
+}
+
+
+.contact-intro p {
+
+    max-width: 450px;
+
+    margin-top: 25px;
+
+    color: wheat;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    text-align: left;
+}
+
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.contact-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.contact-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    border: 1px solid maroon;
+
+    border-radius: 8px;
+
+    color: wheat;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.contact-item:hover {
+
+    background: maroon;
+
+    transform: translateX(8px);
+
+    color: wheat;
+}
+
+
+.contact-item > svg {
+
+    width: 28px;
+
+    height: 28px;
+
+    color: maroon;
+
+    flex-shrink: 0;
+}
+
+
+.contact-item:hover > svg {
+
+    color: wheat;
+}
+
+
+.contact-item div {
+
+    min-width: 0;
+}
+
+
+.contact-item span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: maroon;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+}
+
+
+.contact-item:hover span {
+
+    color: wheat;
+}
+
+
+.contact-item p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    overflow-wrap: anywhere;
+
+    text-align: left;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.contact-footer {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto auto 0;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(128, 0, 0, 0.5);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: maroon;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .contact-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .contact-intro {
+
+        padding: 30px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .contact-container {
+
+        padding: 45px 20px 100px;
+    }
+
+
+    .contact-heading {
+
+        font-size: 32px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .contact-content {
+
+        gap: 35px;
+    }
+
+
+    .contact-intro {
+
+        padding: 25px;
+
+        border-left: 1px solid maroon;
+    }
+
+
+    .contact-intro h2 {
+
+        font-size: 30px;
+    }
+
+
+    .contact-intro p {
+
+        font-size: 13px;
+    }
+
+
+    .contact-item {
+
+        padding: 16px;
+
+        gap: 15px;
+    }
+
+
+    .contact-item > svg {
+
+        width: 24px;
+
+        height: 24px;
+    }
+
+
+    .contact-item p {
+
+        font-size: 12px;
+    }
+
+
+    .contact-footer {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+}

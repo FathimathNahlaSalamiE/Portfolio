@@ -79,7 +79,7 @@ const skillGroups = [
       },
       {
         name: 'REST API',
-        icon: 'carbon:api-1'
+        icon: 'dashicons:rest-api'
       },
       {
         name: 'MySQL',
@@ -114,7 +114,7 @@ const skillGroups = [
       },
       {
         name: 'LangChain',
-        icon: 'simple-icons:langchain'
+        icon: 'thesvg-color:langchain-corporate'
       },
       {
         name: 'Prompt Engineering',
@@ -122,11 +122,11 @@ const skillGroups = [
       },
       {
         name: 'YOLO',
-        icon: 'mdi:eye-outline'
+        icon: 'thesvg-color:yolo'
       },
       {
         name: 'OpenCV',
-        icon: 'simple-icons:opencv'
+        icon: 'devicon:opencv'
       },
       {
         name: 'Computer Vision',

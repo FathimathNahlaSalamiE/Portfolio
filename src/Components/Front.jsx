@@ -51,7 +51,7 @@ function Front() {
   return (
     <>
       {/* FRONT PAGE */}
-      <div  className='front-container'>
+      <div id='front'  className='front-container'>
       {/* CENTER CONTENT */}
         <div className='front-div'>
           <p  className='front-name'>FATHIMATH NAHLA SALAMI E</p>

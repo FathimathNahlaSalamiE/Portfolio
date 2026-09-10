@@ -213,7 +213,7 @@
 
         line-height: 1.7;
 
-        text-align: center;
+        text-align: justify;
     }
 
 
@@ -225,8 +225,8 @@
 
 
     .about-photo img {
-        width: 70%;
+        width: 100%;
 
-        max-width: 240px;
+        max-width: 300px;
     }
 }

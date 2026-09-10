@@ -8,6 +8,15 @@
     min-height: 100svh;
     background-color: #000;
 
+
+    background-image: url('../Images/c.jpg');
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+
     margin: 0;
     padding: 20px;
 
@@ -175,7 +184,7 @@
         font-size: 13px;
         line-height: 1.7;
 
-        text-align: center;
+        text-align: justify;
     }
 
     .front-div .front-resume {
