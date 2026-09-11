@@ -1,3 +1,72 @@
-.page{
-    font-family: 'Courier New', Courier, monospace;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+
+/* ================================
+   NIGHT MODE - DEFAULT
+================================ */
+
+:root {
+  --bg-color: #000;
+  --text-color: wheat;
+  --heading-color: maroon;
+  --border-color: maroon;
+  --accent-color: maroon;
+  --secondary-text: wheat;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+/* Cursor spotlight */
+
+body::before {
+  content: "";
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(116, 114, 114, 0.07),
+    transparent 70%
+  );
+
+  transition: background 0.05s ease;
+}
+
+/* ================================
+   DAY MODE
+================================ */
+
+.day-mode {
+  --bg-color: #fff;
+  --text-color: #000;
+  --heading-color: maroon;
+  --border-color: maroon;
+  --accent-color: maroon;
+  --secondary-text: #000;
+}
+
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
 }

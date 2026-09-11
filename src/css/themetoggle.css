@@ -1,0 +1,62 @@
+.theme-toggle {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  background: transparent;
+  color: maroon;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  z-index: 1200;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: maroon;
+  color: wheat;
+  transform: rotate(15deg);
+}
+
+.theme-toggle svg {
+  width: 22px;
+  height: 22px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+  .theme-toggle {
+    top: 20px;
+    left: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 20px;
+  }
+
+  .theme-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+}

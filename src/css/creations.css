@@ -6,7 +6,14 @@
     width: 100%;
     min-height: 100svh;
 
-    background: #000;
+    background: var(--bg-color);
+    /* background-image: url('../Images/c.jpg');
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+    background-attachment: fixed; */
     color: maroon;
 
     /* Space for fixed Naav + Social */
@@ -150,7 +157,7 @@
     border: 1px solid maroon;
     border-radius: 50%;
 
-    background: #000;
+    background: var(--bg-color);
 
     color: maroon;
 
@@ -173,7 +180,7 @@
 
 .project-arrow:hover {
     background: maroon;
-    color: wheat;
+    color: var(--text-color);
 
     transform: scale(1.08);
 }
@@ -206,7 +213,7 @@
 
     border-radius: 10px;
 
-    background: #000;
+    /* background: var(--bg-color); */
 
     display: flex;
     flex-direction: column;
@@ -283,7 +290,7 @@
 
     margin: 0;
 
-    color: wheat;
+    color: var(--text-color);
 
     font-size: 12px;
 
@@ -323,7 +330,7 @@
 
     border-radius: 20px;
 
-    color: wheat;
+    color: var(--text-color);
 
     font-size: 10px;
 }
@@ -371,7 +378,7 @@
 
     background: maroon;
 
-    color: wheat;
+    color: var(--text-color);
 
     text-decoration: none;
 

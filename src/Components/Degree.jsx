@@ -7,7 +7,7 @@ const education = [
     field: 'Computer Science and Engineering',
     college: 'APJ Abdul Kalam Technological University, Kerala',
     year: '2020 – 2024',
-    grade: 'CGPA: 6.68'
+    // grade: 'CGPA: 6.68'
   }
 ]
 
@@ -30,9 +30,9 @@ function Degree() {
             key={index}
           >
 
-            <span className="education-number">
+            {/* <span className="education-number">
               01
-            </span>
+            </span> */}
 
 
             <div className="education-main">

@@ -54,6 +54,10 @@ function Front() {
       <div id='front'  className='front-container'>
       {/* CENTER CONTENT */}
         <div className='front-div'>
+          <div className="availability-status">
+            <span className="availability-dot"></span>
+            <span>Available for opportunities</span>
+          </div>
           <p  className='front-name'>FATHIMATH NAHLA SALAMI E</p>
           <div className='typing-text'>
             {text}
@@ -65,7 +69,7 @@ function Front() {
              Currently based in the UAE and open to full-stack & 
              AI engineering roles.</p>
           <div className='front-resume'>
-            <a href="https://drive.google.com/file/d/11ssklle7JfMeHBIvjxbkYmDg7QLBWEJT/view?usp=drive_link" target='_blank'>View Resume</a>
+            <a href="/FathimathNahlaSalamiEResume.pdf" target='_blank' rel='noopener noreferrer'>View Resume</a>
           </div>
         </div>
       </div>

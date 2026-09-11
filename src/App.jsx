@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react'
 import Naav from './Components/Naav.jsx'
 import Social from './Components/Social.jsx'
 import Backtotop from './Components/Backtotop.jsx'
-import Home from './Components/Home.jsx'
+import Themetoggle from './Components/Themetoggle.jsx'
 import Front from './Components/Front.jsx'
 import About from './Components/About.jsx'
 import Base from './Components/Base.jsx'
@@ -36,14 +36,35 @@ function App() {
 
   }, [])
 
+   // Cursor effect
+  useEffect(() => {
+  const handleMouseMove = (e) => {
+    document.documentElement.style.setProperty(
+      '--mouse-x',
+      `${e.clientX}px`
+    )
+
+    document.documentElement.style.setProperty(
+      '--mouse-y',
+      `${e.clientY}px`
+    )
+  }
+
+  window.addEventListener('mousemove', handleMouseMove)
+
+  return () => {
+    window.removeEventListener('mousemove', handleMouseMove)
+  }
+}, [])
+
 
   return (
     <>
+    <Themetoggle />
       <Naav />
       <Social />
       <Backtotop visible={showBacktotop} />
       <Front />
-      {/* <Home /> */}
       <About />
       <Base />
       <Creations />

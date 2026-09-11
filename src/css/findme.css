@@ -8,7 +8,14 @@
 
     min-height: 100svh;
 
-    background: #000;
+    background: var(--bg-color);
+    /* background-image: url('../Images/c.jpg');
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+    background-attachment: fixed; */
 
     color: maroon;
 
@@ -108,7 +115,7 @@
 
     margin-top: 25px;
 
-    color: wheat;
+    color: var(--text-color);
 
     font-size: 15px;
 
@@ -146,7 +153,7 @@
 
     border-radius: 8px;
 
-    color: wheat;
+    color: var(--text-color);
 
     text-decoration: none;
 
@@ -160,7 +167,7 @@
 
     transform: translateX(8px);
 
-    color: wheat;
+    color: var(--text-color);
 }
 
 
@@ -178,7 +185,7 @@
 
 .contact-item:hover > svg {
 
-    color: wheat;
+    color: var(--text-color);
 }
 
 
@@ -204,7 +211,7 @@
 
 .contact-item:hover span {
 
-    color: wheat;
+    color: var(--text-color);
 }
 
 
