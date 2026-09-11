@@ -105,10 +105,13 @@
 /* NAME */
 .front-div .front-name {
     margin: 0;
-    font-size: clamp(24px, 3vw, 35px);
+    font-size: clamp(54px, 6vw, 65px);
     font-family: monospace;
     text-align: center;
     white-space: nowrap;
+    text-shadow:
+    0 0 3px maroon,
+    0 0 1px maroon;
 }
 
 /* TYPING TEXT */

@@ -4,9 +4,21 @@ import '../css/themetoggle.css'
 
 function Themetoggle() {
 
+  //set night theme
   const [isDay, setIsDay] = useState(() => {
     return localStorage.getItem('theme') === 'day'
   })
+
+  //set day theme
+  //   const [isDay, setIsDay] = useState(() => {
+  //   const savedTheme = localStorage.getItem('theme')
+
+  //   if (savedTheme) {
+  //     return savedTheme === 'day'
+  //   }
+
+  //   return true // Day mode by default
+  // })
 
   useEffect(() => {
     if (isDay) {

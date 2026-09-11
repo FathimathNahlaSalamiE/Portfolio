@@ -40,8 +40,8 @@ body::before {
   z-index: 9999;
 
   background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(116, 114, 114, 0.07),
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(136, 135, 135, 0.07),
     transparent 70%
   );
 
@@ -53,7 +53,7 @@ body::before {
 ================================ */
 
 .day-mode {
-  --bg-color: #fff;
+  --bg-color: rgb(242, 239, 234);
   --text-color: #000;
   --heading-color: maroon;
   --border-color: maroon;
