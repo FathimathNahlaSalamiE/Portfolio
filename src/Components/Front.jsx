@@ -69,7 +69,7 @@ function Front() {
              Currently based in the UAE and open to full-stack & 
              AI engineering roles.</p>
           <div className='front-resume'>
-            <a href={`${import.meta.env.BASE_URL}Fathimath_Nahla_Salami_E_Resume.pdf`} target="_blank" rel="noopener noreferrer">View Resume</a>
+            <a href={`${import.meta.env.BASE_URL}Fathimath_Nahla_Salami_E_Resume_AI_Engineer.pdf`} target="_blank" rel="noopener noreferrer">View Resume</a>
           </div>
         </div>
       </div>
