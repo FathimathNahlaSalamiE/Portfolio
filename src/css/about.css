@@ -16,7 +16,10 @@
     background-attachment: fixed; */
     color: maroon;
 
-    padding: 50px 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: max(10%, var(--nav-safe));
+    padding-right: max(10%, var(--social-safe));
 
     position: relative;
 }
@@ -138,24 +141,39 @@
 @media (max-width: 992px) {
 
     .about-container {
-        padding: 40px 7%;
+        min-height: auto;
+        padding-top: 40px;
+        padding-bottom: 60px;
+        padding-left: max(7%, var(--nav-safe));
+        padding-right: max(7%, var(--social-safe));
     }
 
     .about-content {
+        min-height: auto;
+        flex-direction: column;
         gap: 40px;
         padding: 30px 2%;
+        align-items: center;
     }
 
     .about-text {
-        width: 50%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-text p {
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 15px;
     }
 
     .about-photo {
-        width: 50%;
+        width: 100%;
     }
 
     .about-photo img {
-        max-width: 300px;
+        max-width: 280px;
+        height: 320px;
     }
 }
 
@@ -169,8 +187,9 @@
     .about-container {
         min-height: 100svh;
 
-        padding: 35px 25px;
-
+        padding-top: 35px;
+        padding-left: 25px;
+        padding-right: 25px;
         padding-bottom: 100px;
     }
 

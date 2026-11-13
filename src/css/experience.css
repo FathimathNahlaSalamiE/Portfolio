@@ -19,7 +19,10 @@
 
     color: maroon;
 
-    padding: 60px 8% 100px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    padding-left: max(8%, var(--nav-safe));
+    padding-right: max(8%, var(--social-safe));
 
     font-family: monospace;
 }
@@ -263,9 +266,8 @@
 
     .experience-container {
 
-        padding-left: 6%;
-
-        padding-right: 6%;
+        padding-left: max(6%, var(--nav-safe));
+        padding-right: max(6%, var(--social-safe));
     }
 
 
@@ -285,7 +287,10 @@
 
     .experience-container {
 
-        padding: 45px 20px 100px;
+        padding-top: 45px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 100px;
     }
 
 

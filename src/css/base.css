@@ -16,7 +16,10 @@
     background-attachment: fixed; */
     color: maroon;
 
-    padding: 50px 8%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: max(8%, var(--nav-safe));
+    padding-right: max(8%, var(--social-safe));
 
     position: relative;
 }
@@ -195,7 +198,10 @@
 
     .base-container {
 
-        padding: 40px 6%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: max(6%, var(--nav-safe));
+        padding-right: max(6%, var(--social-safe));
     }
 
 
@@ -222,8 +228,9 @@
 
     .base-container {
 
-        padding: 35px 20px;
-
+        padding-top: 35px;
+        padding-left: 20px;
+        padding-right: 20px;
         padding-bottom: 100px;
     }
 

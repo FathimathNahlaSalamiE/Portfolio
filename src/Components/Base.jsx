@@ -96,7 +96,11 @@ const skillGroups = [
       {
         name: 'JWT',
         icon: 'mdi:shield-key-outline'
-      }
+      },
+      {
+        name: 'FastAPI',
+        icon: 'logos:fastapi-icon'
+      },
     ]
   },
 
@@ -131,7 +135,23 @@ const skillGroups = [
       {
         name: 'Computer Vision',
         icon: 'mdi:camera-outline'
-      }
+      },
+            {
+        name: 'LangChain',
+        icon: 'thesvg-color:langchain-corporate'
+      },
+      {
+        name: 'ChromaDB',
+        icon: 'mdi:database-search'
+      },
+      {
+        name: 'Groq API',
+        icon: 'thesvg-color:groq'
+      },
+      {
+        name: 'Embeddings',
+        icon: 'mdi:vector-polyline'
+      },
     ]
   },
 

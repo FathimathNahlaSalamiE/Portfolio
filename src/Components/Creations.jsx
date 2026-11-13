@@ -5,6 +5,25 @@ import '../css/creations.css'
 const projects = [
   {
     number: '01',
+    name: 'DocuAI',
+    description:
+      'A full-stack RAG app that answers plain-English questions from uploaded PDFs using LangChain, ChromaDB and a Groq-hosted LLM. Answers come only from retrieved passages, with page-level source citations, an in-app PDF viewer, JWT authentication with per-user data isolation, and a rate-limited guest mode.',
+
+    skills: [
+      { name: 'Python', icon: 'logos:python' },
+      { name: 'FastAPI', icon: 'logos:fastapi-icon' },
+      { name: 'LangChain', icon: 'simple-icons:langchain' },
+      { name: 'ChromaDB', icon: 'mdi:database-search' },
+      { name: 'React', icon: 'logos:react' },
+      { name: 'Groq LLM', icon: 'thesvg-color:groq' },
+      { name: 'JWT', icon: 'logos:jwt-icon' },
+    ],
+
+    github: 'https://github.com/FathimathNahlaSalamiE/DocuAI',
+    live: '#',
+  },
+  {
+    number: '02',
     name: 'Thrift Store',
     description:
       'A Django-based e-commerce platform for buying and selling thrift products with role-based authentication, product management, cart functionality and online payments.',
@@ -22,7 +41,7 @@ const projects = [
   },
 
   {
-    number: '02',
+    number: '03',
     name: 'AI Chatbot',
     description:
       'A React-based AI chatbot interface with conversations, responsive design, Markdown responses and AI API integration.',
@@ -41,7 +60,7 @@ const projects = [
   },
 
   {
-    number: '03',
+    number: '04',
     name: 'Fresh Mart',
     description:
       'A responsive online grocery application with authentication, category-based product browsing, cart management and online payment integration.',
@@ -60,7 +79,7 @@ const projects = [
   },
 
   {
-    number: '04',
+    number: '05',
     name: 'Student Management System',
     description:
       'A Django-based academic management platform with role-based access, student and staff dashboards, attendance, results, leave management and notifications.',
@@ -78,7 +97,7 @@ const projects = [
   },
 
   {
-    number: '05',
+    number: '06',
     name: 'Coffee Website',
     description:
       'A responsive and visually appealing coffee shop website built using HTML, CSS, and JavaScript. This project was created to practice frontend web development concepts including responsive layouts, navigation, styling, images, and JavaScript-based interactions.',
@@ -95,7 +114,7 @@ const projects = [
   },
 
   {
-    number: '06',
+    number: '07',
     name: 'Booksaw',
     description:
       'A web application for selling books online, built using Python and Django. This project demonstrates the development of a book-selling web application with Django, including application structure, database management, templates, static files, media handling, and backend functionality',

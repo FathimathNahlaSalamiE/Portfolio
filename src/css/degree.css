@@ -19,7 +19,10 @@
 
     color: maroon;
 
-    padding: 60px 8%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: max(8%, var(--nav-safe));
+    padding-right: max(8%, var(--social-safe));
 
     font-family: monospace;
 }
@@ -165,7 +168,10 @@
 
     .degree-container {
 
-        padding: 45px 20px 80px;
+        padding-top: 45px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 100px;
     }
 
 
